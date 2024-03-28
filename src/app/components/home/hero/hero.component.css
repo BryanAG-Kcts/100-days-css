@@ -1,0 +1,57 @@
+picture {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  min-height: 60vh;
+  min-height: 60dvh;
+  position: relative;
+  background-image: linear-gradient(
+    to top,
+    #0040a6,
+    #006fc6,
+    #009bdc,
+    #5dc5ec,
+    #a5eefd
+  );
+  overflow: hidden;
+}
+
+.bush1 {
+  z-index: 50;
+}
+
+.bush2 {
+  z-index: 40;
+}
+
+.mount1 {
+  z-index: 30;
+}
+
+.mount2 {
+  z-index: 20;
+}
+
+.leaf1 {
+  z-index: 100;
+}
+
+.leaf2 {
+  z-index: 100;
+}
+
+@media (min-width: 640px) {
+  picture {
+    min-height: 90vh;
+    min-height: 90dvh;
+    align-items: center;
+  }
+}
+
+@media (min-width: 720px) {
+  picture {
+    min-height: 100vh;
+    min-height: 100dvh;
+    align-items: center;
+  }
+}
