@@ -1,0 +1,17 @@
+<main>
+  <h2 class="text-xl sm:text-4xl font-semibold">
+    100 días, 100 proyectos de CSS
+  </h2>
+  <p>
+    Cada día, un nuevo reto de CSS aparece (o puede que más de uno 🥶🥶🥶).
+    Mejora tus habilidades de CSS con este increíble recurso
+    <a class="text-amber-300" href="https://100dayscss.com">100 DAYS OF CSS</a>
+  </p>
+
+  <section>
+    <ng-container *ngFor="let project of projects">
+      <!-- Que porquería ----------v -->
+      <app-project-card class="min-w-0" [project]="project"></app-project-card>
+    </ng-container>
+  </section>
+</main>

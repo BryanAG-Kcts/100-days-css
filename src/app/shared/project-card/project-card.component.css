@@ -1,0 +1,7 @@
+picture:hover p {
+  transform: rotate(-45deg) scale(105%);
+  -webkit-transform: rotate(-45deg) scale(105%);
+  -moz-transform: rotate(-45deg) scale(105%);
+  -ms-transform: rotate(-45deg) scale(105%);
+  -o-transform: rotate(-45deg) scale(105%);
+}

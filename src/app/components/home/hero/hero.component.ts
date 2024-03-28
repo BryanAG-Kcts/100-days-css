@@ -1,12 +1,4 @@
-import {
-  AfterViewInit,
-  Component,
-  ElementRef,
-  OnInit,
-  ViewChild,
-  afterRender,
-  viewChild,
-} from '@angular/core';
+import { Component, ElementRef, ViewChild, afterRender } from '@angular/core';
 
 @Component({
   selector: 'app-hero',
@@ -15,7 +7,7 @@ import {
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.css',
 })
-export class HeroComponent implements AfterViewInit {
+export class HeroComponent {
   @ViewChild('heroHeading')
   private _heroHeading!: ElementRef<HTMLHeadingElement>;
 
@@ -34,8 +26,6 @@ export class HeroComponent implements AfterViewInit {
   @ViewChild('bush2')
   private _bush2!: ElementRef<HTMLImageElement>;
 
-  ngAfterViewInit(): void {}
-
   constructor() {
     afterRender(() => {
       window.addEventListener('scroll', () => {
@@ -46,15 +36,9 @@ export class HeroComponent implements AfterViewInit {
 
         this._leaf2.nativeElement.style.marginLeft = `${clientY / 16}rem`;
         this._leaf1.nativeElement.style.marginLeft = `${-clientY / 16}rem`;
-        this._mount1.nativeElement.style.marginBottom = `${
-          -clientY / 16 + 2
-        }rem`;
-        this._mount2.nativeElement.style.marginBottom = `${
-          -clientY / 16 + 2
-        }rem`;
-        this._bush2.nativeElement.style.marginBottom = `${
-          -clientY / 16 + 2
-        }rem`;
+        this._mount1.nativeElement.style.marginBottom = `${-clientY / 16}rem`;
+        this._mount2.nativeElement.style.marginBottom = `${-clientY / 16}rem`;
+        this._bush2.nativeElement.style.marginBottom = `${-clientY / 16}rem`;
       });
     });
   }
